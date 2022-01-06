@@ -117,12 +117,18 @@ const getPDbId = async(id) => {
     }
 }
 
-const createP = async({name, hp, attack, defense, speed, height, weight, type, image}) => {
+const createP = async(name, hp, attack, defense, speed, height, weight, type, image) => {
     try {
         let newP = await Pokemon.create({
-            id, name, hp, attack, defense, speed, height, weight, type, image
+            name, hp, attack, defense, speed, height, weight, image
         });
-        await newP.addType(type);
+        let typeFind = await Type.findAll({
+            where: {
+                name: type
+            },
+        })
+        newP.addType(typeFind);
+        res.send(newP);
     }catch(e) {
         console.log(e);
         console.log('Your Pokemon can not be create')
@@ -138,3 +144,15 @@ module.exports = {
     getPDbId,
     createP
 }
+
+
+// {
+//     "name": "laura",
+//     "hp": "82",
+//     "attack": "39",
+//     "defense": "66",
+//     "speed": "47",
+//     "height": "93",
+//     "weight": "38",
+//     "image": "url"
+// }

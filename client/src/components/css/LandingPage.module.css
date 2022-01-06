@@ -1,0 +1,36 @@
+body {
+    background-image: linear-gradient(rgba(5,7,12,0.1),rgba(5,7,0,0.1)), url('https://1.bp.blogspot.com/-dBbCR0XMBL4/USOq__wM57I/AAAAAAAABDo/1iS6_7rrjcs/s1600/pokemon-wallpaper-video-game-juego-programa-de-tv-serie-pikachu-anime-manga-infantil+[imagenesyfondoshd.blogspot.com].jpg');
+}
+.container {
+    /*background-image: url('https://1.bp.blogspot.com/-dBbCR0XMBL4/USOq__wM57I/AAAAAAAABDo/1iS6_7rrjcs/s1600/pokemon-wallpaper-video-game-juego-programa-de-tv-serie-pikachu-anime-manga-infantil+[imagenesyfondoshd.blogspot.com].jpg');
+    opacity:0.4; 
+    background-position: center;
+    background-size: cover;
+    background-repeat: none; */
+}
+
+.inside {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.inside h1 {
+    font-weight: bold;
+    color: #000000;
+}
+/*    linear-gradient(to right, #243949 0%, #517fa4 100%);
+    <img src='https://1.bp.blogspot.com/-dBbCR0XMBL4/USOq__wM57I/AAAAAAAABDo/1iS6_7rrjcs/s1600/pokemon-wallpaper-video-game-juego-programa-de-tv-serie-pikachu-anime-manga-infantil+[imagenesyfondoshd.blogspot.com].jpg' alt='Pokemon image' className='i1'/>
+*/
+
+/*.container img {
+    opacity:0.4;
+    filter:alpha(opacity=40); 
+} */
+
+.btn {
+
+}
