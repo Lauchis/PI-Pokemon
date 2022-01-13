@@ -1,0 +1,82 @@
+.container {
+    background-image: url('./images/fondoHome.jpg');
+    background-attachment: fixed;
+    background-size: 1500px; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header {
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    font-weight: 700;
+    /* display: flex; */
+    height: 280px;
+    /* align-items: center; */
+    padding: 10px;
+    /* text-shadow: 1px 1px rgb(19, 18, 18), 2px 2px #6de7e3, 3px 3px rgb(135, 236, 18), 4px 4px #86D6D3;
+    color: rgb(255, 255, 255); */
+    text-shadow: -1.5px 0 rgb(0, 12, 0), 1.5px 0 rgb(3, 3, 3), 0 1.5px rgb(15, 15, 15), 0 -1.5px rgb(10, 12, 10);
+    color: #fff;
+    line-height: 42px;
+}
+
+.btn {
+    color: #560bad;
+    font-family: 'Times New Roman';
+    width: 250px;
+    height: 40px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #560bad;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 25px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+   .btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #560bad;
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+} 
+   .btn:hover {
+    color: #fff;
+}
+   .btn:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+   .btn:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.cards {
+    display: block;
+}
+.img {
+    width: 700px;
+} 
+
+.paginate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link {
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: -1.5px 0 rgb(0, 12, 0), 1.5px 0 rgb(3, 3, 3), 0 1.5px rgb(15, 15, 15), 0 -1.5px rgb(10, 12, 10);
+    color: #fff;   
+}

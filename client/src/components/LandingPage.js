@@ -8,7 +8,7 @@ export default function LandingPage(){
             <div className={styles.inside}>
                 <h1>Welcome to Pokemons Page</h1>
                 <Link to ='/home'>
-                    <button className='{styles.btn}'>Start</button>
+                    <button className={styles.btn}>START</button>
                 </Link>
             </div>
         </div>

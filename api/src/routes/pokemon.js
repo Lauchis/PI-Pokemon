@@ -136,11 +136,35 @@ router.get('/', async (req, res, next) => {
                             image: p.image,
                             attack: p.attack,
                             defense: p.defense,
+                            speed: p.speed,
                             height: p.height,
                             weight: p.weight,
                         }
                     })
                 }
+                //con .next para llegar a la siguiente pagina
+                // const pApi = (await axios.get('https://pokeapi.co/api/v2/pokemon')).data;
+                // const pApiR = pApi.results;
+                // let pData = [];
+                // const pApi2 = (await axios.get(pApi.next)).data.results;
+                // const totP = [...pApiR, ...pApi2];
+                // for(let i = 0; i < totP.length; i++) {
+                //     let pDetail = (await axios.get(totP[i].url)).data;
+                //     pData.push({
+                //         id:pDetail.id,
+                //         name: pDetail.name,
+                //         attack: pDetail.stats[1].base_stat,
+                //         defense: pDetail.stats[2].base_stat,
+                //         height: pDetail.height,
+                //         weight: pDetail.weight,
+                //         image: pDetail.sprites.other.dream_world.front_default,
+                //         type: pDetail.types.map(e => e.type.name),
+                //     })
+                // }
+                // res.send(pDb.concat(pData));
+
+                //con limite de 40 al final de la ruta
+                //lo deje asi porque la info tardaba menos en llegar
                 const pApi =  (await axios.get('https://pokeapi.co/api/v2/pokemon?limit=40')).data.results;
                 let pData = []
                     for (let p of pApi) {  
@@ -153,6 +177,7 @@ router.get('/', async (req, res, next) => {
                             hp: pok.data.stats[0].base_stat,
                             attack: pok.data.stats[1].base_stat,
                             defense: pok.data.stats[2].base_stat,
+                            speed: pok.data.stats[5].base_stat,
                             height: pok.data.height,
                             weight: pok.data.weight,
                             image: pok.data.sprites.other.dream_world.front_default,
@@ -217,7 +242,7 @@ router.post("/", async (req, res, next) => {
             },
         })
         newPoke.addType(typeFind);
-        console.log(newPoke);
+        //console.log(newPoke);
         console.log(typeFind)//algo aca esta mal, me da []
         return res.send(newPoke);
     } catch (error) {
