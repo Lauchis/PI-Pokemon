@@ -1,7 +1,28 @@
-.paginate {
-
+.number {
+    display: inline-flex;
 }
 
-.number {
-    
+.btn {
+    cursor: pointer;
+    border: 1px solid rgb(255, 11, 11);
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.09rem;
+    margin-top: 1rem;
+    width: 2rem;
+    background-color: rgb(255, 11, 11);
+    border-radius: 50%;
+    transition: background 0.5s, color 0.5s;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
+.btn:hover {
+    background-color: #349b32;
+}
+.btn:focus {
+    background-color: #349b32;
+    color: rgb(255, 11, 11);
+    border: 1px solid #349b32;
 }

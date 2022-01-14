@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getByName, orderAz, orderAttack, getAllPokemons, filterType, getTypes, filterDb } from "../redux/actions";
+import { getByName, orderAz, orderAttack, filterType, getTypes, filterDb } from "../redux/actions";
 import styles from './css/SearchBar.module.css';
 
 export default function SearchBar({setActualPage, setOrder}) {
@@ -8,10 +8,9 @@ export default function SearchBar({setActualPage, setOrder}) {
     const [name, setName] = useState('');
     console.log(name)
     const options = useSelector((state) => state.type);
-    console.log(options)//deberia traeme array de types
+    console.log(options)// trae un array de types
     
     useEffect(() => {
-        //setActualPage(1);
         dispatch(getTypes())
     }, [dispatch]);
 
@@ -22,21 +21,12 @@ export default function SearchBar({setActualPage, setOrder}) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        // const validate = pokemon.filter((p) => {
-        //     p.name.includes(name)
-        // });
-        // if (validate.length <= 0) {
-        //     setName('');
-        //     return alert ('This Pokemon does not exist');
-        // } else {
-        //     dispatch(getByName(name));
-        // }
         dispatch(getByName(name));
         setName('');
     }
 
     function handleOrderAz(e) {
-        e.preventDefault();
+        // e.preventDefault();
         dispatch(orderAz(e.target.value));
         setActualPage(1);
         setOrder(`Order by ${e.target.value}`);
@@ -56,7 +46,6 @@ export default function SearchBar({setActualPage, setOrder}) {
 
     function handleFilterType(e) {
         e.preventDefault();
-        //dispatch(getAllPokemons());
         dispatch(filterType(e.target.value));
         console.log(e.target.value);
         setActualPage(1);
@@ -75,7 +64,7 @@ export default function SearchBar({setActualPage, setOrder}) {
             <button
                 type="submit"
                 onClick={(e) => handleSubmit(e)}
-              //  key= {name}
+                key= {name}
                 className={styles.btn}
             > ► Search 
             </button>
@@ -123,7 +112,7 @@ export default function SearchBar({setActualPage, setOrder}) {
                 <select onChange={(e) => handleFilterType(e)} name="type" className={styles.label}>
                     <option value='all' className={styles.label}>all</option>
                     {options?.map((t) => (
-                        <option value={t.name} key={t.id} className={styles.label}>{t.name}</option>
+                        <option value={t.name} key={(t.id)+2} className={styles.label}>{t.name}</option>
                     ))}
                 </select>
             </div>

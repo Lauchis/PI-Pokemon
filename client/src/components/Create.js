@@ -10,9 +10,6 @@ function validate(input) {
     if(!input.name || !validateName.test(input.name)) {
         error.name = 'You must set a valid name';
     }
-    if (input.hp < 0 || input.hp > 999) {
-        error.hp = 'The prop HP must be a number between 0 and 999'
-    }
     return error;
 }
 
@@ -75,65 +72,60 @@ export default function Create() {
     }
 
     return (
-        <div>
-            <Link to= '/home'>Back</Link>
+        <div className={styles.container}>
+            <Link to= '/home' className={styles.link}>Back</Link>
             <h1>Create your own Pokemon</h1>
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <div>
+            <form onSubmit={(e) => handleSubmit(e)} className={styles.form}>
+                <div className={styles.input}>
                     <label>Name:</label>
-                    <input onChange={(e) => handleChange(e)} type='text' value={input.name} name="name" placeholder="Name of Pokemon..." />
+                    <input onChange={(e) => handleChange(e)} type='text' value={input.name} name="name" placeholder="Name of Pokemon..." required />
                     {error.name && (
-                        <p>{error.name}</p>
+                        <p className={styles.error}>{error.name}</p>
                     )}
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label>HP:</label>
                     <input onChange={(e) => handleChange(e)} type='number' min='0' max='999' value={input.hp} name="hp" placeholder="Points..." />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label>Attack:</label>
                     <input onChange={(e) => handleChange(e)} type='number' min='0' max='999' value={input.attack} name="attack" placeholder="Points..." />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label>Defense:</label>
                     <input onChange={(e) => handleChange(e)} type='number' min='0' max='999' value={input.defense} name="defense" placeholder="Points..." />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label>Speed:</label>
                     <input onChange={(e) => handleChange(e)} type='number' min='0' max='999' value={input.speed} name="speed" placeholder="Points..." />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label>Height:</label>
                     <input onChange={(e) => handleChange(e)} type='number' min='0' max='999' value={input.height} name="height" placeholder="Height..." />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label>Weight:</label>
                     <input onChange={(e) => handleChange(e)} type='number' min='0' max='999' value={input.weight} name="weight" placeholder="Weight..." />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label>Image:</label>
                     <input onChange={(e) => handleChange(e)} type='text' value={input.image} name="image" placeholder="Url Pokemon image..." />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label>Type:</label>
                     <select onChange={(e) =>handleSelect(e)}>
                         {options?.map((t) => (
                             <option value={t.id} key={t.id}>{t.name} - Num:{t.id}</option>
                         ))}
                     </select>
-                    {/* <ul>
-                        <li>
-                            {input.type.map(t => t + ' - ')}
-                        </li>
-                    </ul> */}
                      {input.type.map((t) => (
-                        <div key={t}>
+                        <div key={t} className={styles.type}>
                             <p>Num: {t}</p>
-                            <button onClick={() => handleDelete(t)}>X</button>
+                            <button onClick={() => handleDelete(t)} className={styles.btnDel}>X</button>
                         </div>
                     ))}
                 </div>
-                <button type="submit">Create the Pokemon!</button>
+                <button type="submit" className={styles.btn}>Create the Pokemon!</button>
             </form>
         </div>
     )

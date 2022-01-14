@@ -1,5 +1,5 @@
 .container {
-    background-image: url('./images/fondoHome.jpg');
+    background-image: url('./images/solidFound.png');
     background-attachment: fixed;
     background-size: 1500px; 
     padding: 0;
@@ -12,13 +12,13 @@
     font-size: 25px;
     font-weight: 700;
     /* display: flex; */
-    height: 280px;
+    height: 6.2em;
     /* align-items: center; */
-    padding: 10px;
+    padding: 1em;
     /* text-shadow: 1px 1px rgb(19, 18, 18), 2px 2px #6de7e3, 3px 3px rgb(135, 236, 18), 4px 4px #86D6D3;
     color: rgb(255, 255, 255); */
-    text-shadow: -1.5px 0 rgb(0, 12, 0), 1.5px 0 rgb(3, 3, 3), 0 1.5px rgb(15, 15, 15), 0 -1.5px rgb(10, 12, 10);
-    color: #fff;
+    text-shadow: -1.2px 0 rgb(0, 12, 0), 1.2px 0 rgb(3, 3, 3), 0 1.2px rgb(15, 15, 15), 0 -1.2px rgb(10, 12, 10);
+    color: rgb(117, 6, 6);
     line-height: 42px;
 }
 
@@ -78,5 +78,6 @@
     font-size: 25px;
     font-weight: 700;
     text-shadow: -1.5px 0 rgb(0, 12, 0), 1.5px 0 rgb(3, 3, 3), 0 1.5px rgb(15, 15, 15), 0 -1.5px rgb(10, 12, 10);
-    color: #fff;   
+    color: rgb(248, 9, 9);   
+    word-spacing: 6px;
 }

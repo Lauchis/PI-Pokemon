@@ -1,0 +1,62 @@
+.container {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 3rem; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.inside {
+    width: 18em;
+    height: 22em;
+    margin: 5px;
+}
+
+.btn {
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+    /* background-size: 100% 100%; */
+    padding: 1em 2em;
+    /* display: inline-block; */
+    border-style: groove;
+    border-width: 0.4em;
+    border-radius: 2em;
+    /* color: white; */
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+   }
+   
+.btn:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+   }
+   
+.btn:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+   }
+   
+   /* @keyframes gradient {
+    0% {
+     background-position: 0% 50%;
+    }
+   
+    50% {
+     background-position: 100% 50%;
+    }
+   
+    100% {
+     background-position: 0% 50%;
+    }
+   } */

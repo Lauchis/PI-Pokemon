@@ -1,0 +1,34 @@
+* {
+    list-style: none
+}
+
+.container {
+    display: block;
+    align-items: center;
+    /* border-radius: 2em; */
+    /* background: linear-gradient(180deg, #e77676, #3c7ec9); */
+    /* box-shadow: 10px 10px 20px #b0b4ee, -20px -20px 20px #ffffff; */
+    height: 21.2em;
+    width: 16em;
+    margin: 0.1em;
+    /* transition: all 0.5s; */
+    color: #f1ecec;
+
+}
+
+.name {
+    font-size: 1.7em;
+    text-shadow: 7px 4px 5px rgb(10, 221, 35);
+}
+
+ .img > img {
+     width: 15em;
+     height: 15em;
+ }
+
+ .type {
+     text-transform: capitalize;
+     font-size: 1.3em;
+     font-weight: 700;
+     font-style: oblique;
+ }

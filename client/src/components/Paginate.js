@@ -8,10 +8,10 @@ export default function Paginate({qty, allPokemons, paginate}) {
     }
     return (
         <div>
-            <ul className={styles.paginate}>
+            <ul>
                 {page && page.map((number) => (
                     <li className={styles.number} key={number}>
-                        <button onClick={() => paginate(number)} key={number}>
+                        <button onClick={() => paginate(number)} key={number + 1} className={styles.btn}>
                             {number}
                         </button>
                     </li>
@@ -21,46 +21,7 @@ export default function Paginate({qty, allPokemons, paginate}) {
     )
 }
 
-
-// export default function Paginate () { 
-//     let pokemons = useSelector((store) => store.pokemon);
-
-//     let [page, setPage] = useState(0);
-//     let prox = 0;
-//     const pagination = () => {
-//         if ((prox === 0 ) && (page === 0)){
-//             if (pokemons.length){
-//                 prox = prox + 12;
-//                 return pokemons.slice(page, page + 12);    
-//             }
-//             if (pokemons.info) return pokemons;
-//             return [];
-      
-//         }
-//         if (page >= 12){
-//             if (pokemons.length) return pokemons.slice(page, page + 12);
-//             if (pokemons.info) return pokemons;
-//             return []; 
-//         }
-//     };
-//     const array = pagination();
-//     const nextPage = () => {
-//         if (pokemons.length > page + 12) {
-//             if (prox === 12){
-//                 page = page + 12;
-//                 setPage(page);
-//             }else{
-//                 setPage(page + 12);
-//             }
-//         }
-//     }
-//     const previusPage = () => {
-//         if (page > 12) {
-//             setPage(page - 12);      
-//         }if (page === 12) {
-//             setPage(page - 9);
-//         }
-//     }
+//este return lo probe con las flechitas y Previos y Next en ligar de los numeros
 //     return (
 //         <div className="containerhome">
 
@@ -75,7 +36,7 @@ export default function Paginate({qty, allPokemons, paginate}) {
 
 //         </div>
 //     );
-// };
+
 
 
 

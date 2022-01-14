@@ -1,0 +1,117 @@
+body {
+    background-image: url('./images/solidFound.png');
+}
+
+.container {
+}
+
+.link {
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: -1.5px 0 rgb(0, 12, 0), 1.5px 0 rgb(3, 3, 3), 0 1.5px rgb(15, 15, 15), 0 -1.5px rgb(10, 12, 10);
+    color: rgb(248, 9, 9);   
+    letter-spacing: 0.1em;
+}
+
+.container > h1 {
+    width: 100%;
+    /* height: 800px; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(252, 244, 19);
+    text-shadow: #f83 -1px 1px, rgb(20, 20, 19) -2px 2px, #f83 -3px 3px, #f83 -4px 4px, #f83 -5px 5px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px black;
+}
+
+.form {
+    /* border: solid;
+    height: 20em;
+    display: inline-block; */
+}
+
+.input {
+    font-family: 'Times New Roman';
+    font-size: 1.7em;
+    font-weight: 700;
+    padding: 0.3em;
+    color: seagreen;
+}
+
+.input > label {
+    margin-right: 0.2em;
+}
+
+.input > input {
+    border: solid;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    padding-left: 0.4em;
+}
+
+.input > select {
+    border: solid;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    padding-left: 0.4em;
+}
+
+.error {
+    /* content: ""; */
+    /* width: 20rem; */
+    background-color: tomato;
+    margin: 0.5em 8em 0 8em;
+    font-weight: lighter;
+    color: black;
+ 
+}
+
+.type {
+    display: inline-block;
+}
+
+.type > p {
+    margin: 0.1em;
+    padding: 0.3em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  .btn:hover {
+      background-color: #3e8e41;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+  .btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.btnDel {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 50%;
+    background-color: red;
+    font-weight: 700;
+}
+.btnDel:hover {
+    background-color: black;
+    color: red;
+}
