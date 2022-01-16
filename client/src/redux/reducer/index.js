@@ -29,13 +29,13 @@ function rootReducer (state = initialState, action) {
         case 'ORDER_AZ':
             let arrSort = action.payload === 'a-z'
                     ? state.pokemon.sort(function(x, y) {
-                        if(x.name > y.name) return 1;
-                        if(y.name > x.name) return -1;
+                        if(x.name.toLowerCase() > y.name.toLowerCase()) return 1;
+                        if(y.name.toLowerCase() > x.name.toLowerCase()) return -1;
                         return 0;
                     })
                     : state.pokemon.sort(function(x, y) {
-                        if(x.name > y.name) return -1;
-                        if(y.name > x.name) return 1;
+                        if(x.name.toLowerCase() > y.name.toLowerCase()) return -1;
+                        if(y.name.toLowerCase() > x.name.toLowerCase()) return 1;
                         return 0;
                     })
                 return {

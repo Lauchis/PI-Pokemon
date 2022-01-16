@@ -44,11 +44,13 @@ module.exports = {
 
 // {
 //     "name": "laura",
-//     "hp": "82",
+//     "hp": "32", 
 //     "attack": "39",
 //     "defense": "66",
 //     "speed": "47",
 //     "height": "93",
 //     "weight": "38",
-//     "image": "url"
+//     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/217.png",
+//     "type":["6","2"]
 // }
+

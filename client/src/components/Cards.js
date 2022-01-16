@@ -16,7 +16,7 @@ export default function Cards({actualPok}) {
             {actualPok && actualPok.map((e) => {
                 //mapeo los 12 de la pagina que se muestra con actualPok
                 return (
-                    <div className={styles.inside} key={id}>
+                    <div className={styles.inside} key={e.id}>
                         <button className={styles.btn} onClick={() => {
                             setDetail(!detail);
                             setPokemon(e)
@@ -25,7 +25,7 @@ export default function Cards({actualPok}) {
                                 key={e.id}
                                 name = {e.name ? e.name : 'Name not found'}
                                 image = {e.image ? e.image : 'Image not found'} //aca le puedo pasar una imagen por default
-                                type = {e.type?.map((t) => t + ' √   ')}
+                                type = {e.type?.map((t) => t + ' √    ')}
                             />
                         </button>
                     </div>

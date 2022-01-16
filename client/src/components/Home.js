@@ -41,9 +41,9 @@ export default function Home () {
                 <button onClick= {e => {handleClick(e)}}  className={styles.btn}>
                     Charge all Pokemons
                 </button>
-            <div key='a' className={styles.cards}>
+            <div className={styles.cards}>
             {actualPok.length ? (
-                <Cards actualPok={actualPok} />
+                <Cards actualPok={actualPok} key={actualPok.id}/>
             ) : (
                 <img src='https://i.kym-cdn.com/photos/images/original/000/891/176/b6f.gif' alt='' className={styles.img}/>
             )}

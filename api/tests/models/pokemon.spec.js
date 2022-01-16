@@ -17,7 +17,7 @@ describe('Pokemon model', () => {
       it('should work when its a valid name', () => {
         Pokemon.create({ name: 'Pikachu' });
       });
-    });
+    }); 
 
     describe('hp', () => {
       it('should thrown an error if hp is not a number', (done) => {

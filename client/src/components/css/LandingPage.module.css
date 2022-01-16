@@ -20,25 +20,12 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* align-items: center; */
     font-weight: bold;
     font-size: 40px;
     color: ivory;
     text-shadow: #f83 -1px 1px, rgb(20, 20, 19) -2px 2px, #f83 -3px 3px, #f83 -4px 4px, #f83 -5px 5px;
     letter-spacing: 1px;
 }
-/*.inside h1 {
-    font-weight: bold;
-    color: #000000;
-} */
-/*    linear-gradient(to right, #243949 0%, #517fa4 100%);
-    <img src='./images/fondoPokemon.jpg' />
-*/
-
-/*.container img {
-    opacity:0.4;
-    :alpha(opacity=40); 
-} */
 
 .btn {
     position: absolute;

@@ -60,6 +60,7 @@ export default function SearchBar({setActualPage, setOrder}) {
                 onChange={(e) => handleInputChange(e)}
                 onKeyPress={e => e.key === 'Enter' && handleSubmit(e)}
                 className={styles.input}
+                value={name}
             />
             <button
                 type="submit"

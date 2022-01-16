@@ -24,7 +24,7 @@ export default function Detail({pokemon, display}) {
                     <div className={styles.img}>
                         <img src={pokemon.image} alt="Pokemon" />
                     </div>
-                    <div className={styles.title}>
+                    <div className={styles.title} key={pokemon.id}>
                         <h2>Number ID: {pokemon.id} </h2>
                         <h2>Life: {pokemon.hp}</h2>
                         <h2>Attack Points: {pokemon.attack}</h2>
@@ -32,7 +32,7 @@ export default function Detail({pokemon, display}) {
                         <h2>Speed: {pokemon.speed}</h2>
                         <h2>Height: {pokemon.height / 10} meters</h2>
                         <h2>Weight: {pokemon.weight /10} kg</h2>
-                        <h2>Type: {pokemon.type?.map((t) => t + '- ')}</h2>
+                        <h2 key={pokemon.id}>Type: {pokemon.type?.map((t) => t + '- ')}</h2>
                     </div>
                 </div>
             : <p>Loading...</p>}
