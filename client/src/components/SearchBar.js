@@ -113,7 +113,7 @@ export default function SearchBar({setActualPage, setOrder}) {
                 <select onChange={(e) => handleFilterType(e)} name="type" className={styles.label}>
                     <option value='all' className={styles.label}>all</option>
                     {options?.map((t) => (
-                        <option value={t.name} key={(t.id)+2} className={styles.label}>{t.name}</option>
+                        <option value={t.name} key={(t.id)} className={styles.label}>{t.name}</option>
                     ))}
                 </select>
             </div>

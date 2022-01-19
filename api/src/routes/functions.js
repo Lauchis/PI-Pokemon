@@ -54,3 +54,8 @@ module.exports = {
 //     "type":["6","2"]
 // }
 
+//franco
+//https://assets.pokemon.com/assets/cms2/img/pokedex/detail/067.png
+
+//manuel
+//https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png

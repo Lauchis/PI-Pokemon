@@ -66,7 +66,7 @@ router.get('/', async (req, res, next) => {
                             id: p.id,
                             name: p.name,
                             hp: p.hp,
-                            type: p.dataValues.types.map((p)=>p.dataValues.name),
+                            type: p.dataValues.types.map((p) => p.dataValues.name),
                             image: p.image,
                             attack: p.attack,
                             defense: p.defense,
@@ -130,7 +130,7 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async(req, res, next) => {
     let {id} = req.params;
-    //en la Api hay 1119 pokemons.
+    //en la Api hay 898 pokemons.
     try {
         if(id.length < 5) {//significa que es de la api
            let pApiId = await getPApiId(id);

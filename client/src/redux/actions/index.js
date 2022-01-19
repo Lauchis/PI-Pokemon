@@ -79,7 +79,7 @@ export function postPokemon(payload) {
         console.log(resp);
         return dispatch({
             type: 'POST_POKEMON',
-            payload: resp // nose si es resp o {}
+            payload: resp
         });
     }
 }

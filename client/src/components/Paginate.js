@@ -21,23 +21,21 @@ export default function Paginate({qty, allPokemons, paginate}) {
     )
 }
 
-//este return lo probe con las flechitas y Previos y Next en ligar de los numeros
+//este return lo probe con las flechitas y Previos y Next en lugar de los numeros
 //     return (
-//         <div className="containerhome">
+//         <div>
 
-//             <div className="botones">
-//                 <button onClick={previusPage} className="pages">
+//             <div>
+//                 <button onClick={previusPage} className={styles.btn}>
 //                     &laquo; Previous
 //                 </button>
-//                 <button onClick={nextPage} className="pages">
+//                 <button onClick={nextPage} className={styles.btn}>
 //                     Next &raquo;
 //                 </button>
 //             </div>
 
 //         </div>
 //     );
-
-
 
 
 
