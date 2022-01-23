@@ -49,10 +49,12 @@ export default function Create() {
     }
 
     function handleSelect(e) {
-        setInput({
-                ...input,
-                type: [...input.type, e.target.value]
-        })
+        if(!input.type.includes(e.target.value)) {
+            setInput({
+                 ...input,
+                    type: [...input.type, e.target.value]
+            })
+        }
     }
 
     function handleSubmit(e) {

@@ -73,11 +73,11 @@ export default function SearchBar({setActualPage, setOrder}) {
             <div className={styles.order}>
                 <label className={styles.label}>ORDER BY NAME:</label>
                 <label className={styles.label}>
-                    <input onChange={(e) => handleOrderAz(e)} type='checkbox' name='a-z' value='a-z' className={styles.input}></input>
+                    <input onChange={(e) => handleOrderAz(e)} type='radio' name='a-z' value='a-z' className={styles.input}></input>
                     A-Z
                 </label>
                 <label className={styles.label}>
-                    <input onChange={(e) => handleOrderAz(e)} type='checkbox' name="z-a" value='z-a' className={styles.input}></input>
+                    <input onChange={(e) => handleOrderAz(e)} type='radio' name="a-z" value='z-a' className={styles.input}></input>
                     Z-A
                 </label>
                 {/* <select onChange={(e) => handleOrderAz(e)}>
@@ -88,11 +88,11 @@ export default function SearchBar({setActualPage, setOrder}) {
             <div className={styles.order}>
                 <label className={styles.label}>ORDER BY ATTACK:</label>
                 <label className={styles.label}>
-                    <input onChange={(e) => handleOrderAttack(e)} type='checkbox' name='+attack' value='+attack' className={styles.input}></input>
+                    <input onChange={(e) => handleOrderAttack(e)} type='radio' name='+attack' value='+attack' className={styles.input}></input>
                     More Attack
                 </label>
                 <label className={styles.label}>
-                    <input onChange={(e) => handleOrderAttack(e)} type='checkbox' name="-attack" value='-attack' className={styles.input}></input>
+                    <input onChange={(e) => handleOrderAttack(e)} type='radio' name="+attack" value='-attack' className={styles.input}></input>
                     Less Attack
                 </label>
                 {/* <select onChange={(e) => handleOrderAttack(e)}>
